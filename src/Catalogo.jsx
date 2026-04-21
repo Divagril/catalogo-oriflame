@@ -55,19 +55,16 @@ export default function Catalogo() {
   return (
     <div className={`viewport-catalogo ${isMobile ? 'mobile-theme' : 'pc-theme'}`}>
       
-      {/* --- MÓVIL: HEADER CON WHATSAPP ARRIBA --- */}
       {isMobile && (
         <header className="mobile-header">
           <div className="menu-icon">☰</div>
           <div className="logo-oriflame">ORIFLAME <span>SWEDEN</span></div>
-          {/* 🚀 Icono de WhatsApp en el Header */}
           <a href={link} className="header-wa-link">
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
           </a>
         </header>
       )}
 
-      {/* --- PC: SIDEBAR IZQUIERDO --- */}
       {!isMobile && (
         <aside className="sidebar side-left">
           <div className="promo-box">
@@ -82,7 +79,6 @@ export default function Catalogo() {
         </aside>
       )}
 
-      {/* --- CONTENIDO CENTRAL --- */}
       <main className="area-principal">
         <div className="libro-container">
           <Document file="/catalogo.pdf" onLoadSuccess={({ numPages }) => setNumPages(numPages)}>
@@ -95,6 +91,7 @@ export default function Catalogo() {
                 usePortrait={isMobile}
                 drawShadow={true}
                 className="flipbook-real"
+                startPage={0}
               >
                 {Array.from(new Array(numPages), (e, i) => (
                   <Pagina key={i} pageNumber={i + 1} width={dim.w} height={dim.h} />
@@ -104,7 +101,6 @@ export default function Catalogo() {
           </Document>
         </div>
 
-        {/* --- MÓVIL: INFO DEBAJO --- */}
         {isMobile && (
           <section className="mobile-extra">
             <div className="grid-beneficios">
@@ -119,7 +115,6 @@ export default function Catalogo() {
               <p>Explora y elige lo que más le hará sonreír.</p>
             </div>
 
-            {/* 🚀 Solo un botón aquí abajo */}
             <div className="footer-actions-mobile">
               <a href={link} className="btn-action pink single-btn">ESCRÍBEME AHORA</a>
             </div>
