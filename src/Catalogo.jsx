@@ -60,7 +60,7 @@ export default function Catalogo() {
           <div className="menu-icon">☰</div>
           <div className="logo-oriflame">ORIFLAME <span>SWEDEN</span></div>
           <a href={link} className="header-wa-link">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WA" />
           </a>
         </header>
       )}
@@ -116,7 +116,7 @@ export default function Catalogo() {
             </div>
 
             <div className="footer-actions-mobile">
-              <a href={link} className="btn-action pink single-btn">ESCRÍBEME AHORA</a>
+              <a href={link} className="pink-btn">ESCRÍBEME AHORA</a>
             </div>
           </section>
         )}
@@ -132,7 +132,7 @@ export default function Catalogo() {
             <span className="emoji">🎁</span>
             <p>Descuento <br/><span>POR INBOX</span></p>
           </div>
-          <a href={link} className="btn-glossy pink">ESCRÍBEME AHORA</a>
+          <a href={link} className="btn-glossy-pc pink">ESCRÍBEME AHORA</a>
         </aside>
       )}
     </div>
