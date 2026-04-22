@@ -50,7 +50,7 @@ export default function Catalogo() {
     return () => window.removeEventListener('resize', calc);
   }, []);
 
-  const link = "https://wa.me/51931940598?text=Hola! Quiero hacer un pedido del catálogo Oriflame 🌸";
+  const link = "https://wa.me/51921992851?text=Hola! Quiero hacer un pedido del catálogo Oriflame 🌸";
 
   return (
     <div className={`viewport-catalogo ${isMobile ? 'mobile-theme' : 'pc-theme'}`}>
